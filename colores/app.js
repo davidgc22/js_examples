@@ -6,6 +6,9 @@ btn.addEventListener('click',function(){
     const ramdomNumer = getRandomNumber;
     document.body.style.background =colors[ramdomNumer];
     color.textContent = colors[ramdomNumer];
+
+    document.body.style.background = colors[ramdomNumer];
+    color.textContent = colors[ramdomNumer];
 });
 
 function getRandomNumber(){
