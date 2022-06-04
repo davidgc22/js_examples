@@ -3,32 +3,32 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Task list</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <link rel="stylesheet" href="styles.css">
-    <script src='script.js'></script>
+    <script src='script.js' type="text/javascript" defer></script>
 </head>
 <body>
     <div class="list roundBorder">
         <div class="date">
             <div class="dateRigth">
-                <div id="dateNumber"></div>
+                <div id = "dateNumber"></div>
                 <div>
-                    <div id="dateMont"></div>
-                    <div id="dateYear"></div>
+                    <div id = "dateMont"></div>
+                    <div id = "dateYear"></div>
                 </div>
             </div>
-            <div id="dateText"></div>
+            <div id = 'dateText'></div>
         </div>
         <form onsubmit="addNewTask(event)">
             <input type="text" name="TaskText" onautocomplete="off" placeholder="Nueva tarea" class="roundBorder">
             <button type="submit" class="addTaskButton">+</button>
             <button type="button" class="orderbutton roundBorder" onclick="renderOrderedTask()">Ordenar</button>
         </form>
+        <div id="tasksContainer"></div>
     </div>
-    <div id="taskcontainer"></div>
+  
     
 </body>
 </html>
