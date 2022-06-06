@@ -8,6 +8,6 @@ body{
     transform: translateX(-50%) translateY(-50%);
     color: #17d4fe;
     font-size: 60px;
-    font-family: Orbitron;
+    font-family: 'Orbitron',sans-serifs;
     letter-spacing: 7px;
 }
