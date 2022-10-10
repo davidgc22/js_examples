@@ -1,0 +1,36 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="bg-white overflow-hidden shadow-xl sm-rounded mt-12">
+        <table class="table-fixed w-full">
+            <thead>
+                <tr class="bg-green-500 text-white">
+                    <th class="w-20 py-4 ...">ID</th>
+                    <th class="w-1/4 py-4 ...">Tarea</th>
+                    <th class="w-1/2 py-4 ...">Descripcion</th>
+                    <th class="w-28 py-4 ...">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each tasks}}
+                <tr>
+                    <td class="py-3 px-6 text-center">{{id}}</td>
+                    <td class="p-3 text-center">{{title}}</td>
+                    <td class="p-3 text-center">{{description}}</td>
+                    <td class="p-3 flex">
+                        <form action="/tasks/delete" method="POST" class="mx-2">
+                        <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                            <i class="fas fa-trash"></i>
+                            <input type="hidden" value="{{id}}" name="id">
+
+                        </form>
+                        </button>
+                        <a href="/tasks/edit/{{id}}" class="bg-green-500 text-white px-3 py-1 rounded-sm">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+</div>
